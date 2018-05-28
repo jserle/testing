@@ -1,0 +1,34 @@
+<p>This is the partial for view 1.</p>
+
+<div class="quest">
+    <h3>{{question.text}}</h3>
+    <p>{{question.author}} </p> <p><i>{{question.date}}</i></p>
+</div>
+<h3>Ответы</h3>
+<div class="answers">
+    <div ng-repeat="answer in question.answers" class="answer">
+        <div class="vote">
+            <a class="vote-up" ng-click="voteUp(answer)"></a>
+            <span class="rate">{{answer.rate}}</span>
+            <a class="vote-down" ng-click="voteDown(answer)"></a>
+        </div>
+        <b>{{answer.text | formatText}}</b>
+        <p>{{answer.author}}</p>
+        <p><i>{{answer.date}}</i></p>
+    </div>
+</div>
+
+<form name="AuthForm">
+    <fieldset>
+        <p><label for="Login">Login</label>
+            <input id="Login" ng-model="answer.login" min="0" max="10" required placeholder="Login" /></p>
+            <!--<span ng-show="AuthForm.login.$error.min">OMG, so min</span>-->
+            <!--<span ng-show="AuthForm.login.$error.max">OMG, too max</span>-->
+        <p><label for="Password">Password</label>
+            <input id="Password" name="pass" ng-model="answer.password" min="0" max="10" required placeholder="Password" /></p>
+            <!--<span ng-show="AuthForm.pass.$error.min">OMG, so min</span>-->
+            <!--<span ng-show="AuthForm.pass.$error.max">OMG, too max</span>-->
+    </fieldset>
+    <button type="submit" ng-click="authorizationButton(answer, AuthForm)">Authorization</button>
+</form>
+

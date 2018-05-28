@@ -1,0 +1,62 @@
+body {
+  padding: 25px; }
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+  text-align: center; }
+  .menu li {
+    display: inline-block;
+    font-size: 18px;
+    text-transform: uppercase; }
+    .menu li a {
+      color: black; }
+
+.quest {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 10px;
+  background: #F6F6F6; }
+
+.answer {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px; }
+
+.vote {
+  float: left;
+  text-align: center;
+  width: 21px;
+  margin-right: 20px; }
+
+.vote-up, .vote-down {
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+  height: 25px; }
+
+.vote-up {
+  overflow: hidden;
+  background: green; }
+  .vote-up::before {
+    content: "+"; }
+
+.vote-down {
+  overflow: hidden;
+  background: red; }
+  .vote-down::before {
+    content: "-"; }
+
+form fieldset p input {
+  display: block;
+  border: 1px solid black; }
+
+.ng-valid-required fieldset p input {
+  background: green; }
+
+.ng-invalid-required fieldset p input {
+  background: red; }
+.ng-invalid-required.ng-empty {
+  background: transparent; }
+
+/*# sourceMappingURL=app.css.map */
